@@ -1,0 +1,44 @@
+.login{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui;
+    background-color: #6a65ce;
+}
+.formularioLogin{
+    display: flex;
+    justify-content: center;
+}
+.formularioLogin form{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+}
+.formularioLogin form h1{
+    color: #393939;
+}
+.formularioLogin form input{
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+}
+.formularioLogin form input[type='password'],
+[type='text']{
+    background-color: #e5e9ec;
+}
+.formularioLogin form input[type='submit']{
+    background-color: #6a65ce;
+    color: white;
+    border: none;
+}
+.formularioLogin form a{
+    color:gray ;
+    text-decoration: none;
+}

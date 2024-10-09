@@ -2,16 +2,25 @@
 class loginView{
     public function verLogin(){
         echo '<!DOCTYPE html>
-        <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>View</title>
-            </head>
-            <body>
-                <h1>Este es el view</h1>
-            </body>
-        </html>';
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <title>Login</title>
+    </head>
+    <body class="login">
+        <div class="formularioLogin">
+            <form action="/verificar">
+                <h1>Login</h1>
+                <input type="text" id="username" name="username" placeholder="Username">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <input type="submit" value="Iniciar session">
+                <a href="/lost-password">¿Contraseña perdida?</a>
+            </form>
+        </div>
+    </body>
+</html>';
     }
 }
 
