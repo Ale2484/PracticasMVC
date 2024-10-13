@@ -11,7 +11,7 @@ class loginView{
     </head>
     <body class="login">
         <div class="formularioLogin">
-            <form action="/verificar">
+            <form action="/iniciarSession" method="POST">
                 <h1>Login</h1>
                 <input type="text" id="username" name="username" placeholder="Username">
                 <input type="password" id="password" name="password" placeholder="Password">

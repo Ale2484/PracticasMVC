@@ -1,6 +1,5 @@
 <?php
-//Controladores
-require_once 'controller/login.controller.php';
+require_once 'autoload.php';
 $uri = $_SERVER['REQUEST_URI'];
 switch ($uri) {
     case '/':
@@ -10,9 +9,12 @@ switch ($uri) {
         $login = new loginController;
         $login->viewLogin();
         break;
-    
+    case '/iniciarSession':
+        $login = new loginController;
+        $login->iniciarSession();
+        break;
     default:
-        
+        echo "No se ha encontrado";
         break;
 }
 ?>
