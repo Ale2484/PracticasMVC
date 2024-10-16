@@ -1,7 +1,4 @@
-<?php
-class loginView{
-    public function verLogin(){
-        echo '<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -12,6 +9,9 @@ class loginView{
     <body class="login">
         <div class="formularioLogin">
             <form action="/iniciarSession" method="POST">
+                <?php if($_SESSION['logueado'] == 'Incorrecto'){
+                    echo "Usuario o contraseña incorrectos";
+                }?>
                 <h1>Login</h1>
                 <input type="text" id="username" name="username" placeholder="Username">
                 <input type="password" id="password" name="password" placeholder="Password">
@@ -20,8 +20,4 @@ class loginView{
             </form>
         </div>
     </body>
-</html>';
-    }
-}
-
-?>
+</html>

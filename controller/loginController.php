@@ -1,14 +1,23 @@
 <?php
+session_start();
 require_once 'model/loginModel.php';
-require_once 'view/login.view.php';
+
 class loginController{
     public function viewLogin(){
-        $viewLogin = new loginView;
-        $viewLogin->verLogin(); 
+        require_once 'view/login.view.php';
     }
     public function iniciarSession(){
         $iniciarSession = new iniciarSession;
         $iniciarSession->comprobarUsuario();
+        if(isset($_SESSION['logueado'] ) && $_SESSION['logueado'] == 'Si'){
+            header('Location: /home');
+        } else{
+            header('Location: /login');
+        }
+    }
+    public function cerrarSession(){
+        session_destroy();
+        header('Location: /login');
     }
 }
 
